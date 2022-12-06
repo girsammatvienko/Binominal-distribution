@@ -1,0 +1,35 @@
+C:\Users\JustStar\Desktop\RandomTester\Random\bin\Debug\LGPL.rtf
+C:\Users\JustStar\Desktop\RandomTester\Random\bin\Debug\Troschuetz.Random.xml
+C:\Users\JustStar\Desktop\RandomTester\Random\bin\Debug\Troschuetz.Random.dll
+C:\Users\JustStar\Desktop\RandomTester\Random\bin\Debug\Troschuetz.Random.pdb
+C:\Users\JustStar\Desktop\RandomTester\Random\bin\Debug\de\Troschuetz.Random.resources.dll
+C:\Users\JustStar\Desktop\RandomTester\Random\bin\Debug\es\Troschuetz.Random.resources.dll
+C:\Users\JustStar\Desktop\RandomTester\Random\bin\Debug\fr\Troschuetz.Random.resources.dll
+C:\Users\JustStar\Desktop\RandomTester\Random\obj\Debug\Random.csproj.AssemblyReference.cache
+C:\Users\JustStar\Desktop\RandomTester\Random\obj\Debug\Troschuetz.Random.Resources.ExceptionMessages.resources
+C:\Users\JustStar\Desktop\RandomTester\Random\obj\Debug\Troschuetz.Random.Resources.ExceptionMessages.de.resources
+C:\Users\JustStar\Desktop\RandomTester\Random\obj\Debug\Troschuetz.Random.Resources.ExceptionMessages.es.resources
+C:\Users\JustStar\Desktop\RandomTester\Random\obj\Debug\Troschuetz.Random.Resources.ExceptionMessages.fr.resources
+C:\Users\JustStar\Desktop\RandomTester\Random\obj\Debug\Random.csproj.GenerateResource.cache
+C:\Users\JustStar\Desktop\RandomTester\Random\obj\Debug\Random.csproj.CoreCompileInputs.cache
+C:\Users\JustStar\Desktop\RandomTester\Random\obj\Debug\de\Troschuetz.Random.resources.dll
+C:\Users\JustStar\Desktop\RandomTester\Random\obj\Debug\es\Troschuetz.Random.resources.dll
+C:\Users\JustStar\Desktop\RandomTester\Random\obj\Debug\fr\Troschuetz.Random.resources.dll
+C:\Users\JustStar\Desktop\RandomTester\Random\obj\Debug\Troschuetz.Random.dll
+C:\Users\JustStar\Desktop\RandomTester\Random\obj\Debug\Troschuetz.Random.pdb
+C:\Users\dell\Desktop\курсач\Решетняк\Binominal distribution\Binominal distribution\Random\bin\Debug\Troschuetz.Random.xml
+C:\Users\dell\Desktop\курсач\Решетняк\Binominal distribution\Binominal distribution\Random\obj\Debug\Random.csprojResolveAssemblyReference.cache
+C:\Users\dell\Desktop\курсач\Решетняк\Binominal distribution\Binominal distribution\Random\obj\Debug\Troschuetz.Random.Resources.ExceptionMessages.resources
+C:\Users\dell\Desktop\курсач\Решетняк\Binominal distribution\Binominal distribution\Random\obj\Debug\Troschuetz.Random.Resources.ExceptionMessages.de.resources
+C:\Users\dell\Desktop\курсач\Решетняк\Binominal distribution\Binominal distribution\Random\obj\Debug\Troschuetz.Random.Resources.ExceptionMessages.es.resources
+C:\Users\dell\Desktop\курсач\Решетняк\Binominal distribution\Binominal distribution\Random\obj\Debug\Troschuetz.Random.Resources.ExceptionMessages.fr.resources
+C:\Users\dell\Desktop\курсач\Решетняк\Binominal distribution\Binominal distribution\Random\obj\Debug\Random.csproj.GenerateResource.Cache
+C:\Users\dell\Desktop\курсач\Решетняк\Binominal distribution\Binominal distribution\Random\obj\Debug\de\Troschuetz.Random.resources.dll
+C:\Users\dell\Desktop\курсач\Решетняк\Binominal distribution\Binominal distribution\Random\obj\Debug\Troschuetz.Random.dll
+C:\Users\dell\Desktop\курсач\Решетняк\Binominal distribution\Binominal distribution\Random\obj\Debug\Troschuetz.Random.pdb
+C:\Users\dell\Desktop\курсач\Решетняк\Binominal distribution1\Binominal distribution\Random\bin\Debug\Troschuetz.Random.xml
+C:\Users\dell\Desktop\курсач\Решетняк\Binominal distribution1\Binominal distribution\Random\obj\Debug\Troschuetz.Random.dll
+C:\Users\dell\Desktop\курсач\Решетняк\Binominal distribution1\Binominal distribution\Random\obj\Debug\Troschuetz.Random.pdb
+C:\Users\dell\Desktop\стохастика\Binominal distribution\Random\bin\Debug\Troschuetz.Random.xml
+C:\Users\dell\Desktop\стохастика\Binominal distribution\Random\obj\Debug\Troschuetz.Random.dll
+C:\Users\dell\Desktop\стохастика\Binominal distribution\Random\obj\Debug\Troschuetz.Random.pdb

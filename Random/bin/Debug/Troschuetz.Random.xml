@@ -1,0 +1,1366 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Troschuetz.Random</name>
+    </assembly>
+    <members>
+        <member name="T:Troschuetz.Random.BinomialDistribution">
+            <summary>
+            Provides generation of binomial distributed random numbers.
+            </summary>
+            <remarks>
+            The binomial distribution generates only discrete numbers.<br/>
+            The implementation of the <see cref="T:Troschuetz.Random.BinomialDistribution"/> type bases upon information presented on
+              <a href="http://en.wikipedia.org/wiki/binomial_distribution">Wikipedia - Binomial distribution</a>.
+            </remarks>
+        </member>
+        <member name="T:Troschuetz.Random.Distribution">
+            <summary>
+            Declares common functionality for all random number distributions.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.Distribution.generator">
+            <summary>
+            Stores a <see cref="P:Troschuetz.Random.Distribution.Generator"/> object that can be used as underlying random number generator.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.Distribution.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.Distribution"/> class, using a 
+              <see cref="T:Troschuetz.Random.StandardGenerator"/> as underlying random number generator.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.Distribution.#ctor(Troschuetz.Random.Generator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.Distribution"/> class, using the specified 
+              <see cref="P:Troschuetz.Random.Distribution.Generator"/> as underlying random number generator.
+            </summary>
+            <param name="generator">A <see cref="P:Troschuetz.Random.Distribution.Generator"/> object.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="generator"/> is NULL (<see langword="Nothing"/> in Visual Basic).
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.Distribution.Reset">
+            <summary>
+            Resets the random number distribution, so that it produces the same random number sequence again.
+            </summary>
+            <returns>
+            <see langword="true"/>, if the random number distribution was reset; otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.Distribution.NextDouble">
+            <summary>
+            Returns a distributed floating point random number.
+            </summary>
+            <returns>A distributed double-precision floating point number.</returns>
+        </member>
+        <member name="P:Troschuetz.Random.Distribution.Generator">
+            <summary>
+            Gets or sets a <see cref="P:Troschuetz.Random.Distribution.Generator"/> object that can be used as underlying random number generator.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.Distribution.CanReset">
+            <summary>
+            Gets a value indicating whether the random number distribution can be reset, so that it produces the same 
+              random number sequence again.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.Distribution.Minimum">
+            <summary>
+            Gets the minimum possible value of distributed random numbers.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.Distribution.Maximum">
+            <summary>
+            Gets the maximum possible value of distributed random numbers.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.Distribution.Mean">
+            <summary>
+            Gets the mean of distributed random numbers.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.Distribution.Median">
+            <summary>
+            Gets the median of distributed random numbers.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.Distribution.Variance">
+            <summary>
+            Gets the variance of distributed random numbers.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.Distribution.Mode">
+            <summary>
+            Gets the mode of distributed random numbers.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.BinomialDistribution.alpha">
+            <summary>
+            Stores the parameter alpha which is used for generation of binomial distributed random numbers.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.BinomialDistribution.beta">
+            <summary>
+            Stores the parameter beta which is used for generation of binomial distributed random numbers.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.BinomialDistribution.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.BinomialDistribution"/> class, using a 
+              <see cref="T:Troschuetz.Random.StandardGenerator"/> as underlying random number generator.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.BinomialDistribution.#ctor(Troschuetz.Random.Generator)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.BinomialDistribution"/> class, using the specified 
+              <see cref="T:Troschuetz.Random.Generator"/> as underlying random number generator.
+            </summary>
+            <param name="generator">A <see cref="T:Troschuetz.Random.Generator"/> object.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="generator"/> is NULL (<see langword="Nothing"/> in Visual Basic).
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.BinomialDistribution.IsValidAlpha(System.Double)">
+            <summary>
+            Determines whether the specified value is valid for parameter <see cref="P:Troschuetz.Random.BinomialDistribution.Alpha"/>.
+            </summary>
+            <param name="value">The value to check.</param>
+            <returns>
+            <see langword="true"/> if value is greater than or equal to 0.0, and less than or equal to 1.0; otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.BinomialDistribution.IsValidBeta(System.Int32)">
+            <summary>
+            Determines whether the specified value is valid for parameter <see cref="P:Troschuetz.Random.BinomialDistribution.Beta"/>.
+            </summary>
+            <param name="value">The value to check.</param>
+            <returns>
+            <see langword="true"/> if value is greater than or equal to 0; otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.BinomialDistribution.Next">
+            <summary>
+            Returns a binomial distributed random number.
+            </summary>
+            <returns>A binomial distributed 32-bit signed integer.</returns>
+        </member>
+        <member name="M:Troschuetz.Random.BinomialDistribution.NextDouble">
+            <summary>
+            Returns a binomial distributed floating point random number.
+            </summary>
+            <returns>A binomial distributed double-precision floating point number.</returns>
+        </member>
+        <member name="P:Troschuetz.Random.BinomialDistribution.Alpha">
+            <summary>
+            Gets or sets the parameter alpha which is used for generation of binomial distributed random numbers.
+            </summary>
+            <remarks>Call <see cref="M:Troschuetz.Random.BinomialDistribution.IsValidAlpha(System.Double)"/> to determine whether a value is valid and therefor assignable.</remarks>
+        </member>
+        <member name="P:Troschuetz.Random.BinomialDistribution.Beta">
+            <summary>
+            Gets or sets the parameter beta which is used for generation of binomial distributed random numbers.
+            </summary>
+            <remarks>Call <see cref="M:Troschuetz.Random.BinomialDistribution.IsValidBeta(System.Int32)"/> to determine whether a value is valid and therefor assignable.</remarks>
+        </member>
+        <member name="P:Troschuetz.Random.BinomialDistribution.Minimum">
+            <summary>
+            Gets the minimum possible value of binomial distributed random numbers.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.BinomialDistribution.Maximum">
+            <summary>
+            Gets the maximum possible value of binomial distributed random numbers.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.BinomialDistribution.Mean">
+            <summary>
+            Gets the mean value of binomial distributed random numbers.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.BinomialDistribution.Median">
+            <summary>
+            Gets the median of binomial distributed random numbers.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.BinomialDistribution.Variance">
+            <summary>
+            Gets the variance of binomial distributed random numbers.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.BinomialDistribution.Mode">
+            <summary>
+            Gets the mode of binomial distributed random numbers.
+            </summary>
+        </member>
+        <member name="T:Troschuetz.Random.ALFGenerator">
+            <summary>
+            Represents a Additive Lagged Fibonacci pseudo-random number generator.
+            </summary>
+            <remarks>
+            The <see cref="T:Troschuetz.Random.ALFGenerator"/> type bases upon the implementation in the 
+              <a href="http://www.boost.org/libs/random/index.html">Boost Random Number Library</a>.
+            It uses the modulus 2<sup>32</sup> and by default the "lags" 418 and 1279, which can be adjusted through the 
+              associated <see cref="P:Troschuetz.Random.ALFGenerator.ShortLag"/> and <see cref="P:Troschuetz.Random.ALFGenerator.LongLag"/> properties. Some popular pairs are presented on 
+              <a href="http://en.wikipedia.org/wiki/Lagged_Fibonacci_generator">Wikipedia - Lagged Fibonacci generator</a>.
+            </remarks>
+        </member>
+        <member name="T:Troschuetz.Random.Generator">
+            <summary>
+            Declares common functionality for all random number generators.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.Generator.Reset">
+            <summary>
+            Resets the random number generator, so that it produces the same random number sequence again.
+            </summary>
+            <returns>
+            <see langword="true"/>, if the random number generator was reset; otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.Generator.Next">
+            <summary>
+            Returns a nonnegative random number less than <see cref="F:System.Int32.MaxValue"/>.
+            </summary>
+            <returns>
+            A 32-bit signed integer greater than or equal to 0, and less than <see cref="F:System.Int32.MaxValue"/>; that is, 
+              the range of return values includes 0 but not <paramref name="Int32.MaxValue"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.Generator.Next(System.Int32)">
+            <summary>
+            Returns a nonnegative random number less than the specified maximum.
+            </summary>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to 0. 
+            </param>
+            <returns>
+            A 32-bit signed integer greater than or equal to 0, and less than <paramref name="maxValue"/>; that is, 
+              the range of return values includes 0 but not <paramref name="maxValue"/>. 
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.Generator.Next(System.Int32,System.Int32)">
+            <summary>
+            Returns a random number within the specified range. 
+            </summary>
+            <param name="minValue">
+            The inclusive lower bound of the random number to be generated. 
+            </param>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to <paramref name="minValue"/>. 
+            </param>
+            <returns>
+            A 32-bit signed integer greater than or equal to <paramref name="minValue"/>, and less than 
+              <paramref name="maxValue"/>; that is, the range of return values includes <paramref name="minValue"/> but 
+              not <paramref name="maxValue"/>. 
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.Generator.NextDouble">
+            <summary>
+            Returns a nonnegative floating point random number less than 1.0.
+            </summary>
+            <returns>
+            A double-precision floating point number greater than or equal to 0.0, and less than 1.0; that is, 
+              the range of return values includes 0.0 but not 1.0. 
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.Generator.NextDouble(System.Double)">
+            <summary>
+            Returns a nonnegative floating point random number less than the specified maximum.
+            </summary>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to 0.0. 
+            </param>
+            <returns>
+            A double-precision floating point number greater than or equal to 0.0, and less than <paramref name="maxValue"/>; 
+              that is, the range of return values includes 0 but not <paramref name="maxValue"/>. 
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.Generator.NextDouble(System.Double,System.Double)">
+            <summary>
+            Returns a floating point random number within the specified range. 
+            </summary>
+            <param name="minValue">
+            The inclusive lower bound of the random number to be generated. 
+            The range between <paramref name="minValue"/> and <paramref name="maxValue"/> must be less than or equal to
+              <see cref="F:System.Double.MaxValue"/>
+            </param>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to <paramref name="minValue"/>.
+            The range between <paramref name="minValue"/> and <paramref name="maxValue"/> must be less than or equal to
+              <see cref="F:System.Double.MaxValue"/>.
+            </param>
+            <returns>
+            A double-precision floating point number greater than or equal to <paramref name="minValue"/>, and less than 
+              <paramref name="maxValue"/>; that is, the range of return values includes <paramref name="minValue"/> but 
+              not <paramref name="maxValue"/>. 
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.Generator.NextBoolean">
+            <summary>
+            Returns a random Boolean value.
+            </summary>
+            <remarks>
+            Buffers 31 random bits for future calls, so the random number generator is only invoked once in every 31 calls.
+            </remarks>
+            <returns>A <see cref="T:System.Boolean"/> value.</returns>
+        </member>
+        <member name="M:Troschuetz.Random.Generator.NextBytes(System.Byte[])">
+            <summary>
+            Fills the elements of a specified array of bytes with random numbers. 
+            </summary>
+            <remarks>
+            Each element of the array of bytes is set to a random number greater than or equal to 0, and less than or 
+              equal to <see cref="F:System.Byte.MaxValue"/>.
+            </remarks>
+            <param name="buffer">An array of bytes to contain random numbers.</param>
+        </member>
+        <member name="P:Troschuetz.Random.Generator.CanReset">
+            <summary>
+            Gets a value indicating whether the random number generator can be reset, so that it produces the same 
+              random number sequence again.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.ALFGenerator.IntToDoubleMultiplier">
+            <summary>
+            Represents the multiplier that computes a double-precision floating point number greater than or equal to 0.0 
+              and less than 1.0 when it gets applied to a nonnegative 32-bit signed integer.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.ALFGenerator.UIntToDoubleMultiplier">
+            <summary>
+            Represents the multiplier that computes a double-precision floating point number greater than or equal to 0.0 
+              and less than 1.0  when it gets applied to a 32-bit unsigned integer.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.ALFGenerator.shortLag">
+            <summary>
+            Stores the short lag of the Lagged Fibonacci pseudo-random number generator.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.ALFGenerator.longLag">
+            <summary>
+            Stores the long lag of the Lagged Fibonacci pseudo-random number generator.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.ALFGenerator.x">
+            <summary>
+            Stores an array of <see cref="F:Troschuetz.Random.ALFGenerator.longLag"/> random numbers
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.ALFGenerator.i">
+            <summary>
+            Stores an index for the random number array element that will be accessed next.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.ALFGenerator.seed">
+            <summary>
+            Stores the used seed value.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.ALFGenerator.bitBuffer">
+            <summary>
+            Stores an <see cref="T:System.UInt32"/> used to generate up to 32 random <see cref="T:System.Boolean"/> values.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.ALFGenerator.bitCount">
+            <summary>
+            Stores how many random <see cref="T:System.Boolean"/> values still can be generated from <see cref="F:Troschuetz.Random.ALFGenerator.bitBuffer"/>.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.ALFGenerator"/> class, using a time-dependent default 
+              seed value.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.ALFGenerator"/> class, using the specified seed value.
+            </summary>
+            <param name="seed">
+            A number used to calculate a starting value for the pseudo-random number sequence.
+            If a negative number is specified, the absolute value of the number is used. 
+            </param>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.StandardGenerator"/> class, using the specified seed value.
+            </summary>
+            <param name="seed">
+            An unsigned number used to calculate a starting value for the pseudo-random number sequence.
+            </param>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.IsValidShortLag(System.Int32)">
+            <summary>
+            Determines whether the specified value is valid for parameter <see cref="P:Troschuetz.Random.ALFGenerator.ShortLag"/>.
+            </summary>
+            <param name="value">The value to check.</param>
+            <returns>
+            <see langword="true"/> if value is greater than 0; otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.IsValidLongLag(System.Int32)">
+            <summary>
+            Determines whether the specified value is valid for parameter <see cref="P:Troschuetz.Random.ALFGenerator.LongLag"/>.
+            </summary>
+            <param name="value">The value to check.</param>
+            <returns>
+            <see langword="true"/> if value is greater than <see cref="P:Troschuetz.Random.ALFGenerator.ShortLag"/>; otherwise, <see langword="false"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.ResetGenerator">
+            <summary>
+            Resets the <see cref="T:Troschuetz.Random.ALFGenerator"/>, so that it produces the same pseudo-random number sequence again.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.Fill">
+            <summary>
+            Fills the array <see cref="F:Troschuetz.Random.ALFGenerator.x"/> with <see cref="F:Troschuetz.Random.ALFGenerator.longLag"/> new unsigned random numbers.
+            </summary>
+            <remarks>
+            Generated random numbers are 32-bit unsigned integers greater than or equal to <see cref="F:System.UInt32.MinValue"/> 
+              and less than or equal to <see cref="F:System.UInt32.MaxValue"/>.
+            </remarks>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.NextUInt">
+            <summary>
+            Returns an unsigned random number.
+            </summary>
+            <returns>
+            A 32-bit unsigned integer greater than or equal to <see cref="F:System.UInt32.MinValue"/> and 
+              less than or equal to <see cref="F:System.UInt32.MaxValue"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.NextInclusiveMaxValue">
+            <summary>
+            Returns a nonnegative random number less than or equal to <see cref="F:System.Int32.MaxValue"/>.
+            </summary>
+            <returns>
+            A 32-bit signed integer greater than or equal to 0, and less than or equal to <see cref="F:System.Int32.MaxValue"/>; 
+              that is, the range of return values includes 0 and <paramref name="Int32.MaxValue"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.Reset">
+            <summary>
+            Resets the <see cref="T:Troschuetz.Random.ALFGenerator"/>, so that it produces the same pseudo-random number sequence again.
+            </summary>
+            <returns><see langword="true"/>.</returns>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.Next">
+            <summary>
+            Returns a nonnegative random number less than <see cref="F:System.Int32.MaxValue"/>.
+            </summary>
+            <returns>
+            A 32-bit signed integer greater than or equal to 0, and less than <see cref="F:System.Int32.MaxValue"/>; that is, 
+              the range of return values includes 0 but not <paramref name="Int32.MaxValue"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.Next(System.Int32)">
+            <summary>
+            Returns a nonnegative random number less than the specified maximum.
+            </summary>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to 0. 
+            </param>
+            <returns>
+            A 32-bit signed integer greater than or equal to 0, and less than <paramref name="maxValue"/>; that is, 
+              the range of return values includes 0 but not <paramref name="maxValue"/>. 
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="maxValue"/> is less than 0. 
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.Next(System.Int32,System.Int32)">
+            <summary>
+            Returns a random number within the specified range. 
+            </summary>
+            <param name="minValue">
+            The inclusive lower bound of the random number to be generated. 
+            </param>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to <paramref name="minValue"/>. 
+            </param>
+            <returns>
+            A 32-bit signed integer greater than or equal to <paramref name="minValue"/>, and less than 
+              <paramref name="maxValue"/>; that is, the range of return values includes <paramref name="minValue"/> but 
+              not <paramref name="maxValue"/>. 
+            If <paramref name="minValue"/> equals <paramref name="maxValue"/>, <paramref name="minValue"/> is returned.  
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="minValue"/> is greater than <paramref name="maxValue"/>.
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.NextDouble">
+            <summary>
+            Returns a nonnegative floating point random number less than 1.0.
+            </summary>
+            <returns>
+            A double-precision floating point number greater than or equal to 0.0, and less than 1.0; that is, 
+              the range of return values includes 0.0 but not 1.0.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.NextDouble(System.Double)">
+            <summary>
+            Returns a nonnegative floating point random number less than the specified maximum.
+            </summary>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to 0.0. 
+            </param>
+            <returns>
+            A double-precision floating point number greater than or equal to 0.0, and less than <paramref name="maxValue"/>; 
+              that is, the range of return values includes 0 but not <paramref name="maxValue"/>. 
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="maxValue"/> is less than 0. 
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.NextDouble(System.Double,System.Double)">
+            <summary>
+            Returns a floating point random number within the specified range. 
+            </summary>
+            <param name="minValue">
+            The inclusive lower bound of the random number to be generated. 
+            The range between <paramref name="minValue"/> and <paramref name="maxValue"/> must be less than or equal to
+              <see cref="F:System.Double.MaxValue"/>
+            </param>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to <paramref name="minValue"/>.
+            The range between <paramref name="minValue"/> and <paramref name="maxValue"/> must be less than or equal to
+              <see cref="F:System.Double.MaxValue"/>.
+            </param>
+            <returns>
+            A double-precision floating point number greater than or equal to <paramref name="minValue"/>, and less than 
+              <paramref name="maxValue"/>; that is, the range of return values includes <paramref name="minValue"/> but 
+              not <paramref name="maxValue"/>. 
+            If <paramref name="minValue"/> equals <paramref name="maxValue"/>, <paramref name="minValue"/> is returned.  
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="minValue"/> is greater than <paramref name="maxValue"/>.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            The range between <paramref name="minValue"/> and <paramref name="maxValue"/> must be less than
+              or equal to <see cref="F:System.Double.MaxValue"/>.
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.NextBoolean">
+            <summary>
+            Returns a random Boolean value.
+            </summary>
+            <remarks>
+            <remarks>
+            Buffers 32 random bits (1 uint) for future calls, so a new random number is only generated every 32 calls.
+            </remarks>
+            </remarks>
+            <returns>A <see cref="T:System.Boolean"/> value.</returns>
+        </member>
+        <member name="M:Troschuetz.Random.ALFGenerator.NextBytes(System.Byte[])">
+            <summary>
+            Fills the elements of a specified array of bytes with random numbers. 
+            </summary>
+            <remarks>
+            Each element of the array of bytes is set to a random number greater than or equal to 0, and less than or 
+              equal to <see cref="F:System.Byte.MaxValue"/>.
+            </remarks>
+            <param name="buffer">An array of bytes to contain random numbers.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="buffer"/> is a null reference (<see langword="Nothing"/> in Visual Basic). 
+            </exception>
+        </member>
+        <member name="P:Troschuetz.Random.ALFGenerator.ShortLag">
+            <summary>
+            Gets or sets the short lag of the Lagged Fibonacci pseudo-random number generator.
+            </summary>
+            <remarks>Call <see cref="M:Troschuetz.Random.ALFGenerator.IsValidShortLag(System.Int32)"/> to determine whether a value is valid and therefor assignable.</remarks>
+        </member>
+        <member name="P:Troschuetz.Random.ALFGenerator.LongLag">
+            <summary>
+            Gets or sets the long lag of the Lagged Fibonacci pseudo-random number generator.
+            </summary>
+            <remarks>Call <see cref="M:Troschuetz.Random.ALFGenerator.IsValidLongLag(System.Int32)"/> to determine whether a value is valid and therefor assignable.</remarks>
+        </member>
+        <member name="P:Troschuetz.Random.ALFGenerator.CanReset">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Troschuetz.Random.ALFGenerator"/> can be reset, so that it produces the 
+              same pseudo-random number sequence again.
+            </summary>
+        </member>
+        <member name="T:Troschuetz.Random.XorShift128Generator">
+            <summary>
+            Represents a xorshift pseudo-random number generator with period 2^128-1.
+            </summary>
+            <remarks>
+            The <see cref="T:Troschuetz.Random.XorShift128Generator"/> type bases upon the implementation presented in the CP article
+              "<a href="http://www.codeproject.com/csharp/fastrandom.asp">A fast equivalent for System.Random</a>"
+              and the theoretical background on xorshift random number generators published by George Marsaglia 
+              in this paper "<a href="http://www.jstatsoft.org/v08/i14/xorshift.pdf">Xorshift RNGs</a>".
+            </remarks>
+        </member>
+        <member name="F:Troschuetz.Random.XorShift128Generator.SeedY">
+            <summary>
+            Represents the seed for the <see cref="F:Troschuetz.Random.XorShift128Generator.y"/> variable. This field is constant.
+            </summary>
+            <remarks>The value of this constant is 362436069.</remarks>
+        </member>
+        <member name="F:Troschuetz.Random.XorShift128Generator.SeedZ">
+            <summary>
+            Represents the seed for the <see cref="F:Troschuetz.Random.XorShift128Generator.z"/> variable. This field is constant.
+            </summary>
+            <remarks>The value of this constant is 521288629.</remarks>
+        </member>
+        <member name="F:Troschuetz.Random.XorShift128Generator.SeedW">
+            <summary>
+            Represents the seed for the <see cref="F:Troschuetz.Random.XorShift128Generator.w"/> variable. This field is constant.
+            </summary>
+            <remarks>The value of this constant is 88675123.</remarks>
+        </member>
+        <member name="F:Troschuetz.Random.XorShift128Generator.IntToDoubleMultiplier">
+            <summary>
+            Represents the multiplier that computes a double-precision floating point number greater than or equal to 0.0 
+              and less than 1.0 when it gets applied to a nonnegative 32-bit signed integer.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.XorShift128Generator.UIntToDoubleMultiplier">
+            <summary>
+            Represents the multiplier that computes a double-precision floating point number greater than or equal to 0.0 
+              and less than 1.0  when it gets applied to a 32-bit unsigned integer.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.XorShift128Generator.x">
+            <summary>
+            Stores the last but three unsigned random number. 
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.XorShift128Generator.y">
+            <summary>
+            Stores the last but two unsigned random number. 
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.XorShift128Generator.z">
+            <summary>
+            Stores the last but one unsigned random number. 
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.XorShift128Generator.w">
+            <summary>
+            Stores the last generated unsigned random number. 
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.XorShift128Generator.seed">
+            <summary>
+            Stores the used seed value.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.XorShift128Generator.bitBuffer">
+            <summary>
+            Stores an <see cref="T:System.UInt32"/> used to generate up to 32 random <see cref="T:System.Boolean"/> values.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.XorShift128Generator.bitCount">
+            <summary>
+            Stores how many random <see cref="T:System.Boolean"/> values still can be generated from <see cref="F:Troschuetz.Random.XorShift128Generator.bitBuffer"/>.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.XorShift128Generator"/> class, using a time-dependent default 
+              seed value.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.XorShift128Generator"/> class, using the specified seed value.
+            </summary>
+            <param name="seed">
+            A number used to calculate a starting value for the pseudo-random number sequence.
+            If a negative number is specified, the absolute value of the number is used. 
+            </param>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.XorShift128Generator"/> class, using the specified seed value.
+            </summary>
+            <param name="seed">
+            An unsigned number used to calculate a starting value for the pseudo-random number sequence.
+            </param>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.ResetGenerator">
+            <summary>
+            Resets the <see cref="T:Troschuetz.Random.XorShift128Generator"/>, so that it produces the same pseudo-random number sequence again.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.NextUInt">
+            <summary>
+            Returns an unsigned random number.
+            </summary>
+            <returns>
+            A 32-bit unsigned integer greater than or equal to <see cref="F:System.UInt32.MinValue"/> and 
+              less than or equal to <see cref="F:System.UInt32.MaxValue"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.NextInclusiveMaxValue">
+            <summary>
+            Returns a nonnegative random number less than or equal to <see cref="F:System.Int32.MaxValue"/>.
+            </summary>
+            <returns>
+            A 32-bit signed integer greater than or equal to 0, and less than or equal to <see cref="F:System.Int32.MaxValue"/>; 
+              that is, the range of return values includes 0 and <paramref name="Int32.MaxValue"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.Reset">
+            <summary>
+            Resets the <see cref="T:Troschuetz.Random.XorShift128Generator"/>, so that it produces the same pseudo-random number sequence again.
+            </summary>
+            <returns><see langword="true"/>.</returns>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.Next">
+            <summary>
+            Returns a nonnegative random number less than <see cref="F:System.Int32.MaxValue"/>.
+            </summary>
+            <returns>
+            A 32-bit signed integer greater than or equal to 0, and less than <see cref="F:System.Int32.MaxValue"/>; that is, 
+              the range of return values includes 0 but not <paramref name="Int32.MaxValue"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.Next(System.Int32)">
+            <summary>
+            Returns a nonnegative random number less than the specified maximum.
+            </summary>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to 0. 
+            </param>
+            <returns>
+            A 32-bit signed integer greater than or equal to 0, and less than <paramref name="maxValue"/>; that is, 
+              the range of return values includes 0 but not <paramref name="maxValue"/>. 
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="maxValue"/> is less than 0. 
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.Next(System.Int32,System.Int32)">
+            <summary>
+            Returns a random number within the specified range. 
+            </summary>
+            <param name="minValue">
+            The inclusive lower bound of the random number to be generated. 
+            </param>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to <paramref name="minValue"/>. 
+            </param>
+            <returns>
+            A 32-bit signed integer greater than or equal to <paramref name="minValue"/>, and less than 
+              <paramref name="maxValue"/>; that is, the range of return values includes <paramref name="minValue"/> but 
+              not <paramref name="maxValue"/>. 
+            If <paramref name="minValue"/> equals <paramref name="maxValue"/>, <paramref name="minValue"/> is returned.  
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="minValue"/> is greater than <paramref name="maxValue"/>.
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.NextDouble">
+            <summary>
+            Returns a nonnegative floating point random number less than 1.0.
+            </summary>
+            <returns>
+            A double-precision floating point number greater than or equal to 0.0, and less than 1.0; that is, 
+              the range of return values includes 0.0 but not 1.0.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.NextDouble(System.Double)">
+            <summary>
+            Returns a nonnegative floating point random number less than the specified maximum.
+            </summary>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to 0.0. 
+            </param>
+            <returns>
+            A double-precision floating point number greater than or equal to 0.0, and less than <paramref name="maxValue"/>; 
+              that is, the range of return values includes 0 but not <paramref name="maxValue"/>. 
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="maxValue"/> is less than 0. 
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.NextDouble(System.Double,System.Double)">
+            <summary>
+            Returns a floating point random number within the specified range. 
+            </summary>
+            <param name="minValue">
+            The inclusive lower bound of the random number to be generated. 
+            The range between <paramref name="minValue"/> and <paramref name="maxValue"/> must be less than or equal to
+              <see cref="F:System.Double.MaxValue"/>
+            </param>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to <paramref name="minValue"/>.
+            The range between <paramref name="minValue"/> and <paramref name="maxValue"/> must be less than or equal to
+              <see cref="F:System.Double.MaxValue"/>.
+            </param>
+            <returns>
+            A double-precision floating point number greater than or equal to <paramref name="minValue"/>, and less than 
+              <paramref name="maxValue"/>; that is, the range of return values includes <paramref name="minValue"/> but 
+              not <paramref name="maxValue"/>. 
+            If <paramref name="minValue"/> equals <paramref name="maxValue"/>, <paramref name="minValue"/> is returned.  
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="minValue"/> is greater than <paramref name="maxValue"/>.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            The range between <paramref name="minValue"/> and <paramref name="maxValue"/> is greater than
+              <see cref="F:System.Double.MaxValue"/>.
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.NextBoolean">
+            <summary>
+            Returns a random Boolean value.
+            </summary>
+            <remarks>
+            <remarks>
+            Buffers 32 random bits (1 uint) for future calls, so a new random number is only generated every 32 calls.
+            </remarks>
+            </remarks>
+            <returns>A <see cref="T:System.Boolean"/> value.</returns>
+        </member>
+        <member name="M:Troschuetz.Random.XorShift128Generator.NextBytes(System.Byte[])">
+            <summary>
+            Fills the elements of a specified array of bytes with random numbers. 
+            </summary>
+            <remarks>
+            Each element of the array of bytes is set to a random number greater than or equal to 0, and less than or 
+              equal to <see cref="F:System.Byte.MaxValue"/>.
+            </remarks>
+            <param name="buffer">An array of bytes to contain random numbers.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="buffer"/> is a null reference (<see langword="Nothing"/> in Visual Basic). 
+            </exception>
+        </member>
+        <member name="P:Troschuetz.Random.XorShift128Generator.CanReset">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Troschuetz.Random.XorShift128Generator"/> can be reset, so that it produces the 
+              same pseudo-random number sequence again.
+            </summary>
+        </member>
+        <member name="T:Troschuetz.Random.MT19937Generator">
+            <summary>
+            Represents a Mersenne Twister pseudo-random number generator with period 2^19937-1.
+            </summary>
+            <remarks>
+            The <see cref="T:Troschuetz.Random.MT19937Generator"/> type bases upon information and the implementation presented on the
+              <a href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html">Mersenne Twister Home Page</a>.
+            </remarks>
+        </member>
+        <member name="F:Troschuetz.Random.MT19937Generator.N">
+            <summary>
+            Represents the number of unsigned random numbers generated at one time. This field is constant.
+            </summary>
+            <remarks>The value of this constant is 624.</remarks>
+        </member>
+        <member name="F:Troschuetz.Random.MT19937Generator.M">
+            <summary>
+            Represents a constant used for generation of unsigned random numbers. This field is constant.
+            </summary>
+            <remarks>The value of this constant is 397.</remarks>
+        </member>
+        <member name="F:Troschuetz.Random.MT19937Generator.VectorA">
+            <summary>
+            Represents the constant vector a. This field is constant.
+            </summary>
+            <remarks>The value of this constant is 0x9908b0dfU.</remarks>
+        </member>
+        <member name="F:Troschuetz.Random.MT19937Generator.UpperMask">
+            <summary>
+            Represents the most significant w-r bits. This field is constant.
+            </summary>
+            <remarks>The value of this constant is 0x80000000.</remarks>
+        </member>
+        <member name="F:Troschuetz.Random.MT19937Generator.LowerMask">
+            <summary>
+            Represents the least significant r bits. This field is constant.
+            </summary>
+            <remarks>The value of this constant is 0x7fffffff.</remarks>
+        </member>
+        <member name="F:Troschuetz.Random.MT19937Generator.IntToDoubleMultiplier">
+            <summary>
+            Represents the multiplier that computes a double-precision floating point number greater than or equal to 0.0 
+              and less than 1.0 when it gets applied to a nonnegative 32-bit signed integer.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.MT19937Generator.UIntToDoubleMultiplier">
+            <summary>
+            Represents the multiplier that computes a double-precision floating point number greater than or equal to 0.0 
+              and less than 1.0  when it gets applied to a 32-bit unsigned integer.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.MT19937Generator.mt">
+            <summary>
+            Stores the state vector array.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.MT19937Generator.mti">
+            <summary>
+            Stores an index for the state vector array element that will be accessed next.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.MT19937Generator.seed">
+            <summary>
+            Stores the used seed value.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.MT19937Generator.seedArray">
+            <summary>
+            Stores the used seed array.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.MT19937Generator.bitBuffer">
+            <summary>
+            Stores an <see cref="T:System.UInt32"/> used to generate up to 32 random <see cref="T:System.Boolean"/> values.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.MT19937Generator.bitCount">
+            <summary>
+            Stores how many random <see cref="T:System.Boolean"/> values still can be generated from <see cref="F:Troschuetz.Random.MT19937Generator.bitBuffer"/>.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.MT19937Generator"/> class, using a time-dependent default 
+              seed value.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.MT19937Generator"/> class, using the specified seed value.
+            </summary>
+            <param name="seed">
+            A number used to calculate a starting value for the pseudo-random number sequence.
+            If a negative number is specified, the absolute value of the number is used. 
+            </param>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.#ctor(System.UInt32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.MT19937Generator"/> class, using the specified seed value.
+            </summary>
+            <param name="seed">
+            An unsigned number used to calculate a starting value for the pseudo-random number sequence.
+            </param>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.#ctor(System.Int32[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.MT19937Generator"/> class, using the specified seed array.
+            </summary>
+            <param name="seedArray">
+            An array of numbers used to calculate a starting values for the pseudo-random number sequence.
+            If negative numbers are specified, the absolute values of them are used. 
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="seedArray"/> is NULL (<see langword="Nothing"/> in Visual Basic).
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.#ctor(System.UInt32[])">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.MT19937Generator"/> class, using the specified seed array.
+            </summary>
+            <param name="seedArray">
+            An array of unsigned numbers used to calculate a starting values for the pseudo-random number sequence.
+            </param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="seedArray"/> is NULL (<see langword="Nothing"/> in Visual Basic).
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.ResetGenerator">
+            <summary>
+            Resets the <see cref="T:Troschuetz.Random.MT19937Generator"/>, so that it produces the same pseudo-random number sequence again.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.ResetBySeedArray">
+            <summary>
+            Extends resetting of the <see cref="T:Troschuetz.Random.MT19937Generator"/> using the <see cref="F:Troschuetz.Random.MT19937Generator.seedArray"/>.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.GenerateNUInts">
+            <summary>
+            Generates <see cref="F:Troschuetz.Random.MT19937Generator.N"/> unsigned random numbers.
+            </summary>
+            <remarks>
+            Generated random numbers are 32-bit unsigned integers greater than or equal to <see cref="F:System.UInt32.MinValue"/> 
+              and less than or equal to <see cref="F:System.UInt32.MaxValue"/>.
+            </remarks>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.NextUInt">
+            <summary>
+            Returns an unsigned random number.
+            </summary>
+            <returns>
+            A 32-bit unsigned integer greater than or equal to <see cref="F:System.UInt32.MinValue"/> and 
+              less than or equal to <see cref="F:System.UInt32.MaxValue"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.NextInclusiveMaxValue">
+            <summary>
+            Returns a nonnegative random number less than or equal to <see cref="F:System.Int32.MaxValue"/>.
+            </summary>
+            <returns>
+            A 32-bit signed integer greater than or equal to 0, and less than or equal to <see cref="F:System.Int32.MaxValue"/>; 
+              that is, the range of return values includes 0 and <paramref name="Int32.MaxValue"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.Reset">
+            <summary>
+            Resets the <see cref="T:Troschuetz.Random.MT19937Generator"/>, so that it produces the same pseudo-random number sequence again.
+            </summary>
+            <returns><see langword="true"/>.</returns>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.Next">
+            <summary>
+            Returns a nonnegative random number less than <see cref="F:System.Int32.MaxValue"/>.
+            </summary>
+            <returns>
+            A 32-bit signed integer greater than or equal to 0, and less than <see cref="F:System.Int32.MaxValue"/>; that is, 
+              the range of return values includes 0 but not <paramref name="Int32.MaxValue"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.Next(System.Int32)">
+            <summary>
+            Returns a nonnegative random number less than the specified maximum.
+            </summary>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to 0. 
+            </param>
+            <returns>
+            A 32-bit signed integer greater than or equal to 0, and less than <paramref name="maxValue"/>; that is, 
+              the range of return values includes 0 but not <paramref name="maxValue"/>. 
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="maxValue"/> is less than 0. 
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.Next(System.Int32,System.Int32)">
+            <summary>
+            Returns a random number within the specified range. 
+            </summary>
+            <param name="minValue">
+            The inclusive lower bound of the random number to be generated. 
+            </param>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to <paramref name="minValue"/>. 
+            </param>
+            <returns>
+            A 32-bit signed integer greater than or equal to <paramref name="minValue"/>, and less than 
+              <paramref name="maxValue"/>; that is, the range of return values includes <paramref name="minValue"/> but 
+              not <paramref name="maxValue"/>. 
+            If <paramref name="minValue"/> equals <paramref name="maxValue"/>, <paramref name="minValue"/> is returned.  
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="minValue"/> is greater than <paramref name="maxValue"/>.
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.NextDouble">
+            <summary>
+            Returns a nonnegative floating point random number less than 1.0.
+            </summary>
+            <returns>
+            A double-precision floating point number greater than or equal to 0.0, and less than 1.0; that is, 
+              the range of return values includes 0.0 but not 1.0.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.NextDouble(System.Double)">
+            <summary>
+            Returns a nonnegative floating point random number less than the specified maximum.
+            </summary>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to 0.0. 
+            </param>
+            <returns>
+            A double-precision floating point number greater than or equal to 0.0, and less than <paramref name="maxValue"/>; 
+              that is, the range of return values includes 0 but not <paramref name="maxValue"/>. 
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="maxValue"/> is less than 0. 
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.NextDouble(System.Double,System.Double)">
+            <summary>
+            Returns a floating point random number within the specified range. 
+            </summary>
+            <param name="minValue">
+            The inclusive lower bound of the random number to be generated. 
+            The range between <paramref name="minValue"/> and <paramref name="maxValue"/> must be less than or equal to
+              <see cref="F:System.Double.MaxValue"/>
+            </param>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to <paramref name="minValue"/>.
+            The range between <paramref name="minValue"/> and <paramref name="maxValue"/> must be less than or equal to
+              <see cref="F:System.Double.MaxValue"/>.
+            </param>
+            <returns>
+            A double-precision floating point number greater than or equal to <paramref name="minValue"/>, and less than 
+              <paramref name="maxValue"/>; that is, the range of return values includes <paramref name="minValue"/> but 
+              not <paramref name="maxValue"/>. 
+            If <paramref name="minValue"/> equals <paramref name="maxValue"/>, <paramref name="minValue"/> is returned.  
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="minValue"/> is greater than <paramref name="maxValue"/>.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            The range between <paramref name="minValue"/> and <paramref name="maxValue"/> is greater than
+              <see cref="F:System.Double.MaxValue"/>.
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.NextBoolean">
+            <summary>
+            Returns a random Boolean value.
+            </summary>
+            <remarks>
+            Buffers 32 random bits (1 uint) for future calls, so a new random number is only generated every 32 calls.
+            </remarks>
+            <returns>A <see cref="T:System.Boolean"/> value.</returns>
+        </member>
+        <member name="M:Troschuetz.Random.MT19937Generator.NextBytes(System.Byte[])">
+            <summary>
+            Fills the elements of a specified array of bytes with random numbers. 
+            </summary>
+            <remarks>
+            Each element of the array of bytes is set to a random number greater than or equal to 0, and less than or 
+              equal to <see cref="F:System.Byte.MaxValue"/>.
+            </remarks>
+            <param name="buffer">An array of bytes to contain random numbers.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="buffer"/> is a null reference (<see langword="Nothing"/> in Visual Basic). 
+            </exception>
+        </member>
+        <member name="P:Troschuetz.Random.MT19937Generator.CanReset">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Troschuetz.Random.MT19937Generator"/> can be reset, so that it produces the 
+              same pseudo-random number sequence again.
+            </summary>
+        </member>
+        <member name="T:Troschuetz.Random.StandardGenerator">
+            <summary>
+            Represents a simple pseudo-random number generator.
+            </summary>
+            <remarks>
+            The <see cref="T:Troschuetz.Random.StandardGenerator"/> type internally uses an instance of the <see cref="T:System.Random"/> type 
+              to generat pseudo-random numbers.
+            </remarks>
+        </member>
+        <member name="F:Troschuetz.Random.StandardGenerator.generator">
+            <summary>
+            Stores an instance of <see cref="T:System.Random"/> type that is used to generate random numbers.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.StandardGenerator.seed">
+            <summary>
+            Stores the used seed value.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.StandardGenerator.bitBuffer">
+            <summary>
+            Stores an <see cref="T:System.Int32"/> used to generate up to 31 random <see cref="T:System.Boolean"/> values.
+            </summary>
+        </member>
+        <member name="F:Troschuetz.Random.StandardGenerator.bitCount">
+            <summary>
+            Stores how many random <see cref="T:System.Boolean"/> values still can be generated from <see cref="F:Troschuetz.Random.StandardGenerator.bitBuffer"/>.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.StandardGenerator.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.StandardGenerator"/> class, using a time-dependent default 
+              seed value.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.StandardGenerator.#ctor(System.Int32)">
+            <summary>
+            Initializes a new instance of the <see cref="T:Troschuetz.Random.StandardGenerator"/> class, using the specified seed value.
+            </summary>
+            <param name="seed">
+            A number used to calculate a starting value for the pseudo-random number sequence.
+            If a negative number is specified, the absolute value of the number is used. 
+            </param>
+        </member>
+        <member name="M:Troschuetz.Random.StandardGenerator.ResetGenerator">
+            <summary>
+            Resets the <see cref="T:Troschuetz.Random.StandardGenerator"/>, so that it produces the same pseudo-random number sequence again.
+            </summary>
+        </member>
+        <member name="M:Troschuetz.Random.StandardGenerator.Reset">
+            <summary>
+            Resets the <see cref="T:Troschuetz.Random.StandardGenerator"/>, so that it produces the same pseudo-random number sequence again.
+            </summary>
+            <returns><see langword="true"/>.</returns>
+        </member>
+        <member name="M:Troschuetz.Random.StandardGenerator.Next">
+            <summary>
+            Returns a nonnegative random number.
+            </summary>
+            <returns>
+            A 32-bit signed integer greater than or equal to zero and less than <see cref="F:System.Int32.MaxValue"/>.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.StandardGenerator.Next(System.Int32)">
+            <summary>
+            Returns a nonnegative random number less than the specified maximum.
+            </summary>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to 0. 
+            </param>
+            <returns>
+            A 32-bit signed integer greater than or equal to 0, and less than <paramref name="maxValue"/>; that is, 
+              the range of return values includes 0 but not <paramref name="maxValue"/>. 
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="maxValue"/> is less than 0. 
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.StandardGenerator.Next(System.Int32,System.Int32)">
+            <summary>
+            Returns a random number within a specified range. 
+            </summary>
+            <param name="minValue">
+            The inclusive lower bound of the random number to be generated. 
+            </param>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to <paramref name="minValue"/>. 
+            </param>
+            <returns>
+            A 32-bit signed integer greater than or equal to <paramref name="minValue"/>, and less than 
+              <paramref name="maxValue"/>; that is, the range of return values includes <paramref name="minValue"/> but 
+              not <paramref name="maxValue"/>. 
+            If <paramref name="minValue"/> equals <paramref name="maxValue"/>, <paramref name="minValue"/> is returned.  
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="minValue"/> is greater than <paramref name="maxValue"/>.
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.StandardGenerator.NextDouble">
+            <summary>
+            Returns a nonnegative floating point random number less than 1.0.
+            </summary>
+            <returns>
+            A double-precision floating point number greater than or equal to 0.0, and less than 1.0; that is, 
+              the range of return values includes 0.0 but not 1.0.
+            </returns>
+        </member>
+        <member name="M:Troschuetz.Random.StandardGenerator.NextDouble(System.Double)">
+            <summary>
+            Returns a nonnegative floating point random number less than the specified maximum.
+            </summary>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to zero. 
+            </param>
+            <returns>
+            A double-precision floating point number greater than or equal to zero, and less than <paramref name="maxValue"/>; 
+              that is, the range of return values includes zero but not <paramref name="maxValue"/>. 
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="maxValue"/> is less than 0. 
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.StandardGenerator.NextDouble(System.Double,System.Double)">
+            <summary>
+            Returns a floating point random number within the specified range. 
+            </summary>
+            <param name="minValue">
+            The inclusive lower bound of the random number to be generated. 
+            The range between <paramref name="minValue"/> and <paramref name="maxValue"/> must be less than or equal to
+              <see cref="F:System.Double.MaxValue"/>
+            </param>
+            <param name="maxValue">
+            The exclusive upper bound of the random number to be generated. 
+            <paramref name="maxValue"/> must be greater than or equal to <paramref name="minValue"/>.
+            The range between <paramref name="minValue"/> and <paramref name="maxValue"/> must be less than or equal to
+              <see cref="F:System.Double.MaxValue"/>.
+            </param>
+            <returns>
+            A double-precision floating point number greater than or equal to <paramref name="minValue"/>, and less than 
+              <paramref name="maxValue"/>; that is, the range of return values includes <paramref name="minValue"/> but 
+              not <paramref name="maxValue"/>. 
+            If <paramref name="minValue"/> equals <paramref name="maxValue"/>, <paramref name="minValue"/> is returned.  
+            </returns>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="minValue"/> is greater than <paramref name="maxValue"/>.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            The range between <paramref name="minValue"/> and <paramref name="maxValue"/> is greater than
+              <see cref="F:System.Double.MaxValue"/>.
+            </exception>
+        </member>
+        <member name="M:Troschuetz.Random.StandardGenerator.NextBoolean">
+            <summary>
+            Returns a random Boolean value.
+            </summary>
+            <remarks>
+            Buffers 31 random bits (1 int) for future calls, so a new random number is only generated every 31 calls.
+            </remarks>
+            <returns>A <see cref="T:System.Boolean"/> value.</returns>
+        </member>
+        <member name="M:Troschuetz.Random.StandardGenerator.NextBytes(System.Byte[])">
+            <summary>
+            Fills the elements of a specified array of bytes with random numbers. 
+            </summary>
+            <remarks>
+            Each element of the array of bytes is set to a random number greater than or equal to zero, and less than or 
+              equal to <see cref="F:System.Byte.MaxValue"/>.
+            </remarks>
+            <param name="buffer">An array of bytes to contain random numbers.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="buffer"/> is a null reference (<see langword="Nothing"/> in Visual Basic). 
+            </exception>
+        </member>
+        <member name="P:Troschuetz.Random.StandardGenerator.CanReset">
+            <summary>
+            Gets a value indicating whether the <see cref="T:Troschuetz.Random.StandardGenerator"/> can be reset, so that it produces the 
+              same pseudo-random number sequence again.
+            </summary>
+        </member>
+        <member name="T:Troschuetz.Random.Resources.ExceptionMessages">
+            <summary>
+              Класс ресурса со строгой типизацией для поиска локализованных строк и т.д.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.Resources.ExceptionMessages.ResourceManager">
+            <summary>
+              Возвращает кэшированный экземпляр ResourceManager, использованный этим классом.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.Resources.ExceptionMessages.Culture">
+            <summary>
+              Перезаписывает свойство CurrentUICulture текущего потока для всех
+              обращений к ресурсу с помощью этого класса ресурса со строгой типизацией.
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.Resources.ExceptionMessages.ArgumentNull">
+            <summary>
+              Ищет локализованную строку, похожую на {0} is a null reference (Nothing in Visual Basic)..
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.Resources.ExceptionMessages.ArgumentOutOfRangeGreaterEqual">
+            <summary>
+              Ищет локализованную строку, похожую на {0} must be greater than or equal to {1}..
+            </summary>
+        </member>
+        <member name="P:Troschuetz.Random.Resources.ExceptionMessages.ArgumentRangeLessEqual">
+            <summary>
+              Ищет локализованную строку, похожую на The range between {0} and {1} must be less than or equal to {2}..
+            </summary>
+        </member>
+    </members>
+</doc>

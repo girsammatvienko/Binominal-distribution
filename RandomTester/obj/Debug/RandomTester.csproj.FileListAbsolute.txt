@@ -1,0 +1,66 @@
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\LGPL.rtf
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\GPL.rtf
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\RandomTester.exe
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\RandomTester.pdb
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\Troschuetz.Random.dll
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\ZedGraph.dll
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\Troschuetz.Random.pdb
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\Troschuetz.Random.xml
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\de\Troschuetz.Random.resources.dll
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\es\Troschuetz.Random.resources.dll
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\fr\Troschuetz.Random.resources.dll
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\de\ZedGraph.resources.dll
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\es\ZedGraph.resources.dll
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\fr\ZedGraph.resources.dll
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\bin\Debug\sv\ZedGraph.resources.dll
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\obj\Debug\RandomTester.csproj.AssemblyReference.cache
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\obj\Debug\Troschuetz.RandomTester.FormMain.resources
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\obj\Debug\RandomTester.csproj.GenerateResource.cache
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\obj\Debug\RandomTester.csproj.CoreCompileInputs.cache
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\obj\Debug\RandomTester.csproj.CopyComplete
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\obj\Debug\RandomTester.exe
+C:\Users\JustStar\Desktop\RandomTester\RandomTester\obj\Debug\RandomTester.pdb
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\LGPL.rtf
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\GPL.rtf
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\RandomTester.exe
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\RandomTester.pdb
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\Troschuetz.Random.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\ZedGraph.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\Troschuetz.Random.pdb
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\Troschuetz.Random.xml
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\de\Troschuetz.Random.resources.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\es\Troschuetz.Random.resources.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\fr\Troschuetz.Random.resources.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\de\ZedGraph.resources.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\es\ZedGraph.resources.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\fr\ZedGraph.resources.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\bin\Debug\sv\ZedGraph.resources.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\obj\Debug\RandomTester.csprojAssemblyReference.cache
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\obj\Debug\Troschuetz.RandomTester.FormMain.resources
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\obj\Debug\RandomTester.csproj.GenerateResource.cache
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\obj\Debug\RandomTester.csproj.CoreCompileInputs.cache
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\obj\Debug\RandomTester.csproj.CopyComplete
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\obj\Debug\RandomTester.exe
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\RandomTester\RandomTester\RandomTester\obj\Debug\RandomTester.pdb
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\LGPL.rtf
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\GPL.rtf
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\RandomTester.exe
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\RandomTester.pdb
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\Troschuetz.Random.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\ZedGraph.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\Troschuetz.Random.pdb
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\Troschuetz.Random.xml
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\de\Troschuetz.Random.resources.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\es\Troschuetz.Random.resources.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\fr\Troschuetz.Random.resources.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\de\ZedGraph.resources.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\es\ZedGraph.resources.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\fr\ZedGraph.resources.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\bin\Debug\sv\ZedGraph.resources.dll
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\obj\Debug\RandomTester.csprojAssemblyReference.cache
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\obj\Debug\Troschuetz.RandomTester.FormMain.resources
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\obj\Debug\RandomTester.csproj.GenerateResource.cache
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\obj\Debug\RandomTester.csproj.CoreCompileInputs.cache
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\obj\Debug\RandomTester.csproj.CopyComplete
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\obj\Debug\RandomTester.exe
+F:\уни\4 курс 1 семестр\Стохастика\Курсовая\Решетняк\Binominal distribution\Binominal distribution\RandomTester\obj\Debug\RandomTester.pdb
